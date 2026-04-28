@@ -126,8 +126,8 @@ img {
 
 /* Forzar padding directo del header para que SIEMPRE haya aire en los bordes */
 .site-header .container {
-  padding-left: 28px;
-  padding-right: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .site-header__inner {
