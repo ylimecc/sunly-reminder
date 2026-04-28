@@ -124,6 +124,12 @@ img {
   border-bottom: 1px solid var(--line);
 }
 
+/* Forzar padding directo del header para que SIEMPRE haya aire en los bordes */
+.site-header .container {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
 .site-header__inner {
   position: relative;
   display: flex;
