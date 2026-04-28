@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Política de privacidad de Sunly Reminder.">
+  <meta name="theme-color" content="#FC8C5E">
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Política de Privacidad — Sunly Reminder</title>
+
+  <script>
+    (function () {
+      try {
+        const saved = localStorage.getItem('sunly-theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand">
+        <img src="assets/icon.png" alt="" class="brand__icon">
+        <span>Sunly Reminder</span>
+      </a>
+      <div class="header-actions">
+        <button class="theme-toggle" aria-label="Cambiar tema claro/oscuro" type="button">
+          <svg class="theme-toggle__icon theme-toggle__sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+      <nav class="nav" id="primary-nav">
+        <a href="index.html#features">Funciones</a>
+        <a href="index.html#privacidad">Privacidad</a>
+        <a href="privacy.html">Política</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="legal">
+      <a class="legal__back" href="index.html">← Volver al inicio</a>
+
+      <div class="lang-toggle" role="tablist">
+        <a href="#es" class="active" data-lang="es">Español</a>
+        <a href="#en" data-lang="en">English</a>
+      </div>
+
+      <section id="es">
+        <h1>Política de Privacidad</h1>
+        <p class="legal__updated">Última actualización: 28 de abril de 2026</p>
+
+        <p>
+          Esta política describe qué datos recoge la aplicación
+          <strong>Sunly Reminder</strong> ("la app"), cómo se utilizan y los
+          derechos del usuario.
+        </p>
+
+        <h2>1. Información que recogemos</h2>
+
+        <h3>1.1 Cuando inicias sesión con Google (opcional)</h3>
+        <p>
+          Si decides iniciar sesión con tu cuenta de Google para sincronizar
+          tus datos entre dispositivos, recibimos:
+        </p>
+        <ul>
+          <li>Tu correo electrónico</li>
+          <li>Tu nombre público de Google</li>
+          <li>Tu foto de perfil de Google</li>
+          <li>Un identificador único de usuario (UID)</li>
+        </ul>
+        <p>
+          Estos datos los proporciona Google a través del servicio Google
+          Sign-In y se utilizan únicamente para identificarte y vincular tus
+          tareas/recordatorios a tu cuenta.
+        </p>
+
+        <h3>1.2 Datos generados por ti dentro de la app</h3>
+        <p>
+          Cuando creas tareas, recordatorios o ajustes, almacenamos:
+        </p>
+        <ul>
+          <li>Título y descripción de la tarea</li>
+          <li>Hora y fecha del recordatorio</li>
+          <li>Emoji asociado (si lo agregaste)</li>
+          <li>Estado (completado / pendiente)</li>
+          <li>Configuraciones de la app (idioma, tema, modo de sonido)</li>
+        </ul>
+        <p>
+          Si <strong>no</strong> has iniciado sesión, estos datos se guardan
+          únicamente en tu dispositivo y no salen de él.
+        </p>
+        <p>
+          Si <strong>sí</strong> has iniciado sesión con Google, estos datos
+          se sincronizan con Google Cloud Firestore (servicio de Firebase,
+          propiedad de Google) para que estén disponibles en tus otros
+          dispositivos donde uses la misma cuenta.
+        </p>
+
+        <h3>1.3 Datos que <strong>no</strong> recogemos</h3>
+        <ul>
+          <li>No recogemos tu ubicación.</li>
+          <li>No recogemos información sobre tu uso de otras apps.</li>
+          <li>No recogemos datos de tu agenda telefónica ni mensajes.</li>
+          <li>No usamos rastreadores publicitarios ni analíticas de terceros.</li>
+        </ul>
+
+        <h2>2. Permisos del dispositivo</h2>
+        <p>
+          La app solicita los siguientes permisos solo para las funciones
+          indicadas:
+        </p>
+        <ul>
+          <li>
+            <strong>Notificaciones:</strong> para mostrarte recordatorios a
+            la hora programada.
+          </li>
+          <li>
+            <strong>Micrófono:</strong> solo cuando uses el asistente de voz
+            para crear tareas. El audio se procesa por el servicio de
+            reconocimiento de voz del sistema operativo y
+            <strong>no se sube a nuestros servidores ni se almacena</strong>.
+          </li>
+          <li>
+            <strong>Biometría / huella digital:</strong> opcional, solo si
+            activas el bloqueo de la app. No se transmite ni se almacena
+            ningún dato biométrico — la verificación la hace tu propio
+            dispositivo.
+          </li>
+          <li>
+            <strong>Internet:</strong> necesario para iniciar sesión con
+            Google y sincronizar datos.
+          </li>
+        </ul>
+
+        <h2>3. Almacenamiento y seguridad</h2>
+        <ul>
+          <li>
+            Los datos sincronizados se almacenan en servidores de Google
+            Cloud Firestore (Firebase) bajo las medidas de seguridad de
+            Google.
+          </li>
+          <li>
+            Si configuras un PIN de bloqueo, este se almacena cifrado (hash
+            SHA-256 con sal) localmente en tu dispositivo. Nunca enviamos tu
+            PIN.
+          </li>
+          <li>La comunicación con Firebase usa HTTPS/TLS.</li>
+        </ul>
+
+        <h2>4. Compartir datos con terceros</h2>
+        <p>
+          <strong>
+            No vendemos, alquilamos ni compartimos tu información con
+            terceros con fines publicitarios.
+          </strong>
+        </p>
+        <p>
+          Los únicos terceros que procesan datos en nombre del servicio son:
+        </p>
+        <ul>
+          <li>
+            <strong>Google Firebase / Firestore</strong> — almacenamiento
+            sincronizado (solo si inicias sesión).
+          </li>
+          <li><strong>Google Sign-In</strong> — autenticación.</li>
+        </ul>
+        <p>
+          Estos servicios están sujetos a la
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+            Política de Privacidad de Google</a>.
+        </p>
+
+        <h2>5. Tus derechos</h2>
+        <p>Puedes en cualquier momento:</p>
+        <ul>
+          <li>
+            <strong>Cerrar sesión:</strong> tus datos quedan solo en el
+            dispositivo.
+          </li>
+          <li>
+            <strong>Borrar tu cuenta y datos:</strong> solicita la
+            eliminación enviando un correo a la dirección de contacto al
+            final de esta política. Eliminaremos todos tus datos asociados
+            en un plazo máximo de 30 días.
+          </li>
+          <li>
+            <strong>Exportar tus datos:</strong> puedes compartir tareas
+            como archivos <code>.ics</code> desde la propia app.
+          </li>
+        </ul>
+
+        <h2>6. Niños</h2>
+        <p>
+          La app no está dirigida a menores de 13 años. No recogemos a
+          sabiendas datos de menores. Si crees que un menor nos ha
+          proporcionado información, contáctanos para eliminarla.
+        </p>
+
+        <h2>7. Cambios en esta política</h2>
+        <p>
+          Si hacemos cambios sustanciales, actualizaremos la fecha al inicio
+          de este documento y, cuando sea relevante, notificaremos en la
+          app.
+        </p>
+
+        <h2>8. Contacto</h2>
+        <p>
+          Para cualquier pregunta o solicitud relacionada con tus datos:
+        </p>
+        <p>
+          <strong>Correo electrónico:</strong>
+          <a href="mailto:stremeros69@gmail.com">stremeros69@gmail.com</a><br>
+          <strong>Responsable:</strong> Sunly Reminder
+        </p>
+      </section>
+
+      <hr>
+
+      <section id="en">
+        <h1>Privacy Policy</h1>
+        <p class="legal__updated">Last updated: April 28, 2026</p>
+
+        <p>
+          This policy describes what data the
+          <strong>Sunly Reminder</strong> application ("the app") collects,
+          how it is used, and the user's rights.
+        </p>
+
+        <h2>1. Information we collect</h2>
+
+        <h3>1.1 When you sign in with Google (optional)</h3>
+        <p>
+          If you sign in with your Google account to sync your data across
+          devices, we receive:
+        </p>
+        <ul>
+          <li>Your email address</li>
+          <li>Your public Google name</li>
+          <li>Your Google profile picture</li>
+          <li>A unique user identifier (UID)</li>
+        </ul>
+        <p>
+          This data is provided by Google through the Google Sign-In service
+          and is used solely to identify you and link your tasks/reminders
+          to your account.
+        </p>
+
+        <h3>1.2 Data you create within the app</h3>
+        <p>
+          When you create tasks, reminders, or settings, we store:
+        </p>
+        <ul>
+          <li>Task title and description</li>
+          <li>Reminder time and date</li>
+          <li>Associated emoji (if any)</li>
+          <li>Status (completed / pending)</li>
+          <li>App settings (language, theme, sound mode)</li>
+        </ul>
+        <p>
+          If you are <strong>not</strong> signed in, this data is saved
+          locally on your device only.
+        </p>
+        <p>
+          If you <strong>are</strong> signed in with Google, this data is
+          synced to Google Cloud Firestore (Firebase, owned by Google) so
+          it is available on other devices using the same account.
+        </p>
+
+        <h3>1.3 What we do <strong>not</strong> collect</h3>
+        <ul>
+          <li>We do not collect your location.</li>
+          <li>We do not track your use of other apps.</li>
+          <li>We do not access your contacts or messages.</li>
+          <li>We do not use advertising trackers or third-party analytics.</li>
+        </ul>
+
+        <h2>2. Device permissions</h2>
+        <ul>
+          <li>
+            <strong>Notifications:</strong> to show reminders at the
+            scheduled time.
+          </li>
+          <li>
+            <strong>Microphone:</strong> only when using the voice
+            assistant. Audio is processed by the OS speech-recognition
+            service and
+            <strong>is never uploaded to our servers or stored</strong>.
+          </li>
+          <li>
+            <strong>Biometrics / fingerprint:</strong> optional, only if
+            you enable app lock. No biometric data is transmitted —
+            verification happens on your device.
+          </li>
+          <li>
+            <strong>Internet:</strong> required for Google Sign-In and data
+            sync.
+          </li>
+        </ul>
+
+        <h2>3. Storage and security</h2>
+        <ul>
+          <li>
+            Synced data is stored on Google Cloud Firestore servers under
+            Google's security measures.
+          </li>
+          <li>
+            If you set a PIN, it is stored hashed (SHA-256 with salt)
+            locally on your device. We never transmit your PIN.
+          </li>
+          <li>All Firebase communication uses HTTPS/TLS.</li>
+        </ul>
+
+        <h2>4. Sharing with third parties</h2>
+        <p>
+          <strong>
+            We do not sell, rent, or share your information with third
+            parties for advertising purposes.
+          </strong>
+        </p>
+        <p>
+          The only third parties that process data on behalf of the service
+          are:
+        </p>
+        <ul>
+          <li>
+            <strong>Google Firebase / Firestore</strong> — synced storage
+            (only if you sign in).
+          </li>
+          <li><strong>Google Sign-In</strong> — authentication.</li>
+        </ul>
+        <p>
+          These services are subject to
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+            Google's Privacy Policy</a>.
+        </p>
+
+        <h2>5. Your rights</h2>
+        <p>You can at any time:</p>
+        <ul>
+          <li>
+            <strong>Sign out:</strong> your data remains only on the
+            device.
+          </li>
+          <li>
+            <strong>Delete your account and data:</strong> request deletion
+            by emailing the address at the bottom. We will remove all
+            associated data within 30 days.
+          </li>
+          <li>
+            <strong>Export your data:</strong> you can share tasks as
+            <code>.ics</code> files from the app.
+          </li>
+        </ul>
+
+        <h2>6. Children</h2>
+        <p>
+          The app is not directed at children under 13. We do not knowingly
+          collect data from minors.
+        </p>
+
+        <h2>7. Changes</h2>
+        <p>
+          If we make significant changes, we will update the date at the
+          top of this document.
+        </p>
+
+        <h2>8. Contact</h2>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:stremeros69@gmail.com">stremeros69@gmail.com</a><br>
+          <strong>Provider:</strong> Sunly Reminder
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="brand">
+            <img src="assets/icon.png" alt="" class="brand__icon">
+            <span>Sunly Reminder</span>
+          </a>
+          <p>Recordatorios bonitos y simples para organizar tu día con calma.</p>
+        </div>
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h4>Producto</h4>
+            <ul>
+              <li><a href="index.html#features">Funciones</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="privacy.html">Privacidad</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Contacto</h4>
+            <ul>
+              <li><a href="mailto:stremeros69@gmail.com">stremeros69@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        © 2026 Sunly Reminder. Hecho con calma desde Yucatán.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle entre español e inglés con scroll suave a la sección
+    document.querySelectorAll('.lang-toggle a').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        document.querySelectorAll('.lang-toggle a').forEach((a) => a.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+
+    // Dark/light mode toggle
+    (function () {
+      const btn = document.querySelector('.theme-toggle');
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        const current =
+          document.documentElement.getAttribute('data-theme') ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('sunly-theme', next); } catch (e) {}
+      });
+    })();
+
+    // Menú hamburguesa
+    (function () {
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('#primary-nav');
+      if (!toggle || !nav) return;
+
+      function close() {
+        nav.classList.remove('is-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+
+      toggle.addEventListener('click', () => {
+        const willOpen = !nav.classList.contains('is-open');
+        nav.classList.toggle('is-open', willOpen);
+        toggle.classList.toggle('is-open', willOpen);
+        toggle.setAttribute('aria-expanded', String(willOpen));
+      });
+
+      nav.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', close);
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') close();
+      });
+    })();
+  </script>
+</body>
+</html>
