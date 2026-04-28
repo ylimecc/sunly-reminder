@@ -432,8 +432,12 @@ img {
   }
   .hero__inner {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
     text-align: center;
+  }
+  /* En móvil/tablet el ícono va ARRIBA del texto */
+  .hero__visual {
+    order: -1;
   }
   .hero__lead {
     margin-left: auto;
@@ -443,7 +447,7 @@ img {
     justify-content: center;
   }
   .hero__icon {
-    width: 240px;
+    width: 140px;
   }
 }
 
@@ -853,17 +857,27 @@ img {
     border-radius: 8px;
   }
   .header-actions {
-    gap: 8px;
+    gap: 6px;
   }
   .theme-toggle,
   .nav-toggle {
-    width: 40px;
-    height: 40px;
-    border-radius: 11px;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
   }
   .theme-toggle__icon {
-    width: 17px;
-    height: 17px;
+    width: 16px;
+    height: 16px;
+  }
+  .nav-toggle__bar {
+    width: 16px;
+  }
+  .nav-toggle__bar:nth-child(1) { top: 12px; }
+  .nav-toggle__bar:nth-child(2) { top: 17px; }
+  .nav-toggle__bar:nth-child(3) { top: 22px; }
+  .nav-toggle.is-open .nav-toggle__bar:nth-child(1),
+  .nav-toggle.is-open .nav-toggle__bar:nth-child(3) {
+    top: 17px;
   }
   .nav {
     right: 28px;
@@ -883,7 +897,7 @@ img {
     margin-bottom: 24px;
   }
   .hero__icon {
-    width: 200px;
+    width: 110px;
   }
   .hero__ctas {
     flex-direction: column;
