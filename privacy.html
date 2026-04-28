@@ -19,7 +19,12 @@
         <img src="assets/icon.png" alt="" class="brand__icon">
         <span>Sunly Reminder</span>
       </a>
-      <nav class="nav">
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="nav" id="primary-nav">
         <a href="index.html#features">Funciones</a>
         <a href="index.html#privacidad">Privacidad</a>
         <a href="privacy.html">Política</a>
@@ -410,6 +415,34 @@
         link.classList.add('active');
       });
     });
+
+    // Menú hamburguesa
+    (function () {
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('#primary-nav');
+      if (!toggle || !nav) return;
+
+      function close() {
+        nav.classList.remove('is-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+
+      toggle.addEventListener('click', () => {
+        const willOpen = !nav.classList.contains('is-open');
+        nav.classList.toggle('is-open', willOpen);
+        toggle.classList.toggle('is-open', willOpen);
+        toggle.setAttribute('aria-expanded', String(willOpen));
+      });
+
+      nav.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', close);
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') close();
+      });
+    })();
   </script>
 </body>
 </html>
