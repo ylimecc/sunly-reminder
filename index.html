@@ -24,7 +24,12 @@
         <img src="assets/icon.png" alt="" class="brand__icon">
         <span>Sunly Reminder</span>
       </a>
-      <nav class="nav">
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="nav" id="primary-nav">
         <a href="#features">Funciones</a>
         <a href="#privacidad">Privacidad</a>
         <a href="privacy.html">Política</a>
@@ -167,7 +172,7 @@
           <div class="footer__col">
             <h4>Contacto</h4>
             <ul>
-              <li><a href="mailto:photonpounce@gmail.com>photonpounce@gmail.com</a></li>
+              <li><a href="mailto:stremeros69@gmail.com">stremeros69@gmail.com</a></li>
             </ul>
           </div>
         </div>
@@ -177,5 +182,36 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('#primary-nav');
+      if (!toggle || !nav) return;
+
+      function close() {
+        nav.classList.remove('is-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+
+      toggle.addEventListener('click', () => {
+        const willOpen = !nav.classList.contains('is-open');
+        nav.classList.toggle('is-open', willOpen);
+        toggle.classList.toggle('is-open', willOpen);
+        toggle.setAttribute('aria-expanded', String(willOpen));
+      });
+
+      // Cerrar al tocar un link del menú
+      nav.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', close);
+      });
+
+      // Cerrar con Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') close();
+      });
+    })();
+  </script>
 </body>
 </html>
