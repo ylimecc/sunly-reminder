@@ -10,11 +10,11 @@ Sitio oficial de la app **Sunly Reminder**: landing, política de privacidad y g
 
 Sunly Reminder es una app de tareas y recordatorios diseñada para lo esencial, sin atajos:
 
-- 📅 **Calendario integrado** — tus recordatorios organizados de un vistazo
-- 🎙️ **Asistente de voz** — dicta la tarea y listo
-- 🔄 **Sincronización con Google** — tus datos siempre contigo
-- 🔐 **Bloqueo biométrico** — tus recordatorios son solo tuyos
-- 📤 **Comparte a donde sea** — envía tareas por WhatsApp, correo o impórtalas en cualquier calendario
+- 📅 **Calendario integrado**: tus recordatorios organizados de un vistazo
+- 🎙️ **Asistente de voz**: dicta la tarea y listo
+- 🔄 **Sincronización con Google**: tus datos siempre contigo
+- 🔐 **Bloqueo biométrico**: tus recordatorios son solo tuyos
+- 📤 **Comparte a donde sea**: envía tareas por WhatsApp, correo o impórtalas en cualquier calendario
 
 ## Páginas de este sitio
 
@@ -30,4 +30,4 @@ HTML + CSS puro, hospedado en GitHub Pages.
 
 ---
 
-© 2026 Sunly Reminder — *Tus datos son tuyos.*
+© 2026 Sunly Reminder - *Tus datos son tuyos.*
